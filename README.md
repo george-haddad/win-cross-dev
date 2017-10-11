@@ -1,9 +1,19 @@
 # win-cross-dev
 Cross Platform Development Setup for Windows
 
-## Enhancing PowerShell with [Scoop](http://scoop.sh)
+---
 
-Scoop is a command line installer for Windows that runs ontop of the PowerShell. You could say it is like [Homebrew](https://brew.sh/) but for Windows. The nice thing is that it installs and manages windows applications and ported Linux tools all in your user environment. It also makes your interaction with PowerShell identical if not very close to a Linux bash shell.
+## Table of Contents
+
+- [Enhancing PowerShell with Scoop](#powershell)
+- [Enabling the Linux Subsystem for Windows](#linux)
+- [EOL](#eol)
+- [Configure Git](#git)
+- [Configure IDE](#ide)
+
+## Enhancing PowerShell with Scoop <a name="powershell"/>
+
+[Scoop](http://scoop.sh) is a command line installer for Windows that runs ontop of the PowerShell. You could say it is like [Homebrew](https://brew.sh/) but for Windows. The nice thing is that it installs and manages windows applications and ported Linux tools all in your user environment. It also makes your interaction with PowerShell identical if not very close to a Linux bash shell.
 
 - Open Windows PowerShell
 - Run `Set-ExecutionPolicy RemoteSigned -scope CurrentUser`
@@ -73,7 +83,7 @@ You should now have a very sophisticated PowerShell terminal with a Linux like i
 | update   | Update apps, or Scoop itself               |
 | which    |  Locate a program path                     |
 
-## Enabling the Linux Subsystem for Windows
+## Enabling the Linux Subsystem for Windows  <a name="linux"/>
 
 Would it not be great if we literally had native Linux environment on Windows? Well it seems [pigs flew](https://en.wikipedia.org/wiki/When_pigs_fly)! Windows 10 64bit on the Anniversary edition has a beta Linux Subsystem available. When enabled it has a full featured Linux subsystem in your local user directory with an Ubuntu bash shell. On this shell you can do all Ubuntu command-line actions such as install apps using `apt-get`. What is also nice is that the Windows and Linux subsystems can see and communicate with each other (filesystem and networking). This makes it ideal to run Linux only services, commands and what not without having to install a Virtual Machine.
 
@@ -122,3 +132,42 @@ else
 fi
 unset color_prompt force_color_prompt
 ```
+
+## EOL <a name="eol"/>
+One of the most important aspect of cross-platform development is to be consistent with your EOLs in your files. The main objectives for this goal are the following:
+
+- Use Linux style EOL '\n'
+- Add EOL at the end of each file
+- Use UTF-8 encoding for all text files
+- Use tools to enforce these objectives
+
+### Configure Git <a name="git"/>
+
+Git comes with 3 settings
+
+| Setting Name | Value | Description |
+---------------|-------|-------------|
+| core.autocrlf| true  | Convert all LF to CRLF when checking out and committing code. |
+| core.autocrlf| false | Disables CRLF conversion, garbage in/garbage out |
+| core.autocrlf| input | Convert all CRLF to LF when committing code |
+
+Normally you want to set the `core.autocrlf` to `false` or `input`.
+
+- When to set it to `false`?
+  - This gives you ultimate control
+  - Code editor controls EOLs for you
+  - Tools such as eslint enforces Linux EOL
+  - You have tools and settings that convert CRLF for you
+- When to set it to `input`
+  - Git has the last say in converting your EOL
+  - Whatever happens it will always convert to Linux EOL when committing
+  - It may auto-convert LF to CRLF on checkout (needs verification)
+  - Code editor and tools may miss some files for enforcing Linux EOL
+
+### Configure IDE <a name="ide"/>
+
+All if not most code editors and IDEs will have an option to select what Line endings to use in your code or on newly created files.
+
+- Set the IDE or code editor to exclusively use Linux EOL
+- Set UTF-8 as the default file encoding
+- Setup tools like eslint to enforce Linux EOL by flagging Windows EOL as errors
