@@ -46,7 +46,6 @@ $ scoop install sed
 
 ```bash
 $ scoop install concfg
-$ concfg import solarized small
 $ scoop install pshazz
 ```
 
@@ -82,6 +81,105 @@ You should now have a very sophisticated PowerShell terminal with a Linux like i
 | uninstall| Uninstall an app                           |
 | update   | Update apps, or Scoop itself               |
 | which    |  Locate a program path                     |
+
+#### Configuring the shell further
+
+For a simple solarize-themed shell, run the following command:
+
+```bash
+$ concfg import solarized small
+```
+
+_**For those who still think powershell can never look as hacky as bash or even zsh, read the below, taken from [this blog post](http://cornelcocioaba.ro/wp/2017/04/28/make-powershell-look-like-cmder/)**_
+
+- Create a `.json` theme file anywhere in your system, we'll call ours `mytheme.json`, and add the below code to it:
+
+```json
+{
+    "black": "#272822",
+    "dark_blue": "#01549e",
+    "dark_green": "#74aa04",
+    "dark_cyan": "#1a83a6",
+    "dark_red": "#a70334",
+    "dark_magenta": "#89569c",
+    "dark_yellow": "#b6b649",
+    "gray": "#cacaca",
+    "dark_gray": "#7c7c7c",
+    "blue": "#0383f5",
+    "green": "#8dd006",
+    "cyan": "#58c2e5",
+    "red": "#f3044b",
+    "magenta": "#a87db8",
+    "yellow": "#cccc81",
+    "white": "#ffffff",
+    "screen_colors": "gray,black",
+    "popup_colors": "dark_magenta,white",
+    "font_face": "Lucida Console",
+    "font_true_type": true,
+    "font_size": "8x14",
+    "font_weight": 0,
+    "cursor_size": "small",
+    "window_size": "80x25",
+    "screen_buffer_size": "80x300",
+    "command_history_length": 65,
+    "num_history_buffers": 4,
+    "quick_edit": true,
+    "insert_mode": true,
+    "fullscreen": false,
+    "load_console_IME": true
+}
+```
+- To use our new theme, we will use `concfg` - which we've previously installed using `scoop install` - by running:
+
+```bash
+concfg import \path\to\mytheme.json
+```
+> :checkered_flag: That's all we need to prettify our shell, but there is more we can do to customize the prompt using another utility we have installed called `pshazz`
+
+- First, create a new theme by running the following command (name your theme however you want):
+
+```bash
+pshazz new mytheme
+```
+
+- This will open up a the newly generated theme file in `notepad` (your system default text editor). Replace the contents of this file with the following JSON code:
+
+```JSON
+{
+    "plugins": [ "git", "ssh", "z", "aliases", "dircolors" ],
+    "dircolors": {
+        "dirs": [
+            [".*", "blue", ""]
+        ],
+        "files": [
+            ["(?ix).(7z|zip|tar|gz|rar)$",                        "darkcyan",   ""],
+            ["(?ix).(exe|bat|cmd|py|pl|ps1|psm1|vbs|rb|reg)$",    "darkgreen",  ""],
+            ["(?ix).(doc|docx|ppt|pptx|xls|xlsx|mdb|mdf|ldf)$",   "magenta",    ""],
+            ["(?ix).(txt|cfg|conf|config|yml|ini|csv|log|json)$", "darkyellow", ""],
+            ["(?ix).(sln|csproj|sqlproj|proj|targets)$",          "darkred",    ""],
+            [".*",                                                "gray",   ""]
+        ]
+    },
+    "prompt": [
+        [ "green",  "", "$path" ],
+        [ "red",   "", "$git_lbracket$git_branch$git_dirty$git_rbracket" ],
+        [ "green", "", "$([char]0x3E)" ]
+    ],
+    "git": {
+        "prompt_dirty":    "*",
+        "prompt_lbracket": " (",
+        "prompt_rbracket": ")"
+    }
+}
+```
+
+- Save the file, close it, and go back to Powershell and run the following command:
+
+```bash
+pshazz use mytheme
+```
+
+> :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the results of your commands (such as `ls`) pretty print with custom colors.
 
 ## Enabling the Linux Subsystem for Windows  <a name="linux"/>
 
