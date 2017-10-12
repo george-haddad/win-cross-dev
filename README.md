@@ -136,48 +136,29 @@ concfg import \path\to\mytheme.json
 ```
 > :checkered_flag: That's all we need to prettify our shell, but there is more we can do to customize the prompt using another utility we have installed called `pshazz`
 
-- First, create a new theme by running the following command (name your theme however you want):
+- There are a lot of default themes built into pshazz, and it is fairly easy to create you own by running:
 
 ```bash
 pshazz new mytheme
 ```
+where `mytheme` is any name you want.
 
-- This will open up a the newly generated theme file in `notepad` (your system default text editor). Replace the contents of this file with the following JSON code:
-
-```JSON
-{
-    "plugins": [ "git", "ssh", "z", "aliases", "dircolors" ],
-    "dircolors": {
-        "dirs": [
-            [".*", "blue", ""]
-        ],
-        "files": [
-            ["(?ix).(7z|zip|tar|gz|rar)$",                        "darkcyan",   ""],
-            ["(?ix).(exe|bat|cmd|py|pl|ps1|psm1|vbs|rb|reg)$",    "darkgreen",  ""],
-            ["(?ix).(doc|docx|ppt|pptx|xls|xlsx|mdb|mdf|ldf)$",   "magenta",    ""],
-            ["(?ix).(txt|cfg|conf|config|yml|ini|csv|log|json)$", "darkyellow", ""],
-            ["(?ix).(sln|csproj|sqlproj|proj|targets)$",          "darkred",    ""],
-            [".*",                                                "gray",   ""]
-        ]
-    },
-    "prompt": [
-        [ "green",  "", "$path" ],
-        [ "red",   "", "$git_lbracket$git_branch$git_dirty$git_rbracket" ],
-        [ "green", "", "$([char]0x3E)" ]
-    ],
-    "git": {
-        "prompt_dirty":    "*",
-        "prompt_lbracket": " (",
-        "prompt_rbracket": ")"
-    }
-}
-```
-
-- Save the file, close it, and go back to Powershell and run the following command:
+- Once you are done editing your theme's colors and custom prompt text, you can use it with the following command:
 
 ```bash
 pshazz use mytheme
 ```
+
+A good default theme is xpando:
+
+```bash
+pshazz use xpando
+```
+
+_**Concerning the powershell font**, you may want to take a look at some [patched fonts](https://github.com/runsisi/consolas-font-for-powerline) in order to display special characters required by some themes (e.g. agnoster). 
+You can use this font in powershell from the **top left menu** -> **Defaults Menu** -> **Font**_
+
+
 
 > :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the results of your commands (such as `ls`) pretty print with custom colors.
 
