@@ -46,7 +46,6 @@ $ scoop install sed
 
 ```bash
 $ scoop install concfg
-$ concfg import solarized small
 $ scoop install pshazz
 ```
 
@@ -82,6 +81,16 @@ You should now have a very sophisticated PowerShell terminal with a Linux like i
 | uninstall| Uninstall an app                           |
 | update   | Update apps, or Scoop itself               |
 | which    |  Locate a program path                     |
+
+#### Configuring the shell further
+
+For a simple solarize-themed shell, run the following command:
+
+```bash
+$ concfg import solarized small
+```
+
+For those who still think powershell can never look as hacky as bash or even zsh, take a look at [this blog post](http://cornelcocioaba.ro/wp/2017/04/28/make-powershell-look-like-cmder/).
 
 ## Enabling the Linux Subsystem for Windows  <a name="linux"/>
 
