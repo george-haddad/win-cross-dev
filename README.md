@@ -84,83 +84,54 @@ You should now have a very sophisticated PowerShell terminal with a Linux like i
 
 #### Configuring the shell further
 
-For a simple solarize-themed shell, run the following command:
+_**For those who still think powershell can never look as hacky as bash or even zsh, allow me to prove you wrong:**_
+
+- First, use the utility `concfg` we've installed previously to search for a nice theme preset:
 
 ```bash
-$ concfg import solarized small
+$ concfg presets
 ```
 
-_**For those who still think powershell can never look as hacky as bash or even zsh, read the below, taken from [this blog post](http://cornelcocioaba.ro/wp/2017/04/28/make-powershell-look-like-cmder/)**_
-
-- Create a `.json` theme file anywhere in your system, we'll call ours `mytheme.json`, and add the below code to it:
-
-```json
-{
-    "black": "#272822",
-    "dark_blue": "#01549e",
-    "dark_green": "#74aa04",
-    "dark_cyan": "#1a83a6",
-    "dark_red": "#a70334",
-    "dark_magenta": "#89569c",
-    "dark_yellow": "#b6b649",
-    "gray": "#cacaca",
-    "dark_gray": "#7c7c7c",
-    "blue": "#0383f5",
-    "green": "#8dd006",
-    "cyan": "#58c2e5",
-    "red": "#f3044b",
-    "magenta": "#a87db8",
-    "yellow": "#cccc81",
-    "white": "#ffffff",
-    "screen_colors": "gray,black",
-    "popup_colors": "dark_magenta,white",
-    "font_face": "Lucida Console",
-    "font_true_type": true,
-    "font_size": "8x14",
-    "font_weight": 0,
-    "cursor_size": "small",
-    "window_size": "80x25",
-    "screen_buffer_size": "80x300",
-    "command_history_length": 65,
-    "num_history_buffers": 4,
-    "quick_edit": true,
-    "insert_mode": true,
-    "fullscreen": false,
-    "load_console_IME": true
-}
-```
-- To use our new theme, we will use `concfg` - which we've previously installed using `scoop install` - by running:
+- You can try all of these themes using the command below. The `powershell-defaults` one works great if you're not sure.
 
 ```bash
-concfg import \path\to\mytheme.json
+$ concfg import powershell-defaults
 ```
+
 > :checkered_flag: That's all we need to prettify our shell, but there is more we can do to customize the prompt using another utility we have installed called `pshazz`
 
 - There are a lot of default themes built into pshazz, and it is fairly easy to create you own by running:
 
 ```bash
-pshazz new mytheme
+$ pshazz new mytheme
 ```
 where `mytheme` is any name you want.
 
 - Once you are done editing your theme's colors and custom prompt text, you can use it with the following command:
 
 ```bash
-pshazz use mytheme
+$ pshazz use mytheme
 ```
 
-A good default theme is xpando:
+A theme developed by @Faultless from Postlight kicks it up a notch. You can get it by downloading the JSON file:
 
 ```bash
-pshazz use xpando
+~ $ curl -O https://raw.githubusercontent.com/Faultless/pshazz/master/themes/xpander.json
+~ $ mv ~/xpander.json ~/pshazz/xpander.json
 ```
 
-_**Concerning the powershell font**, you may want to take a look at some [patched fonts](https://github.com/runsisi/consolas-font-for-powerline) in order to display special characters required by some themes (e.g. agnoster). 
+And then use the theme:
+
+```bash
+$ pshazz use xpander
+```
+
+_**Concerning the powershell font**, you will need to download and install the [Patched Consolas font for Powerline](https://github.com/runsisi/consolas-font-for-powerline) in order to display special characters required by some themes (e.g. pshazz, agnoster). 
 You can use this font in powershell from the **top left menu** -> **Defaults Menu** -> **Font**_
 
 
 
-> :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the results of your commands (such as `ls`) pretty print with custom colors.
+> :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the prompt has that *nix look and feel we all(?) love.
 
 ## Enabling the Linux Subsystem for Windows  <a name="linux"/>
 
