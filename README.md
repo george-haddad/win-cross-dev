@@ -113,7 +113,7 @@ where `mytheme` is any name you want.
 $ pshazz use mytheme
 ```
 
-A theme developed by @Faultless from Postlight kicks it up a notch. You can get it by downloading the JSON file:
+A theme developed by @Faultless kicks it up a notch. You can get it by downloading the JSON file:
 
 ```bash
 ~ $ curl -O https://raw.githubusercontent.com/Faultless/pshazz/master/themes/xpander.json
