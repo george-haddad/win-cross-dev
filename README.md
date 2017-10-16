@@ -69,18 +69,18 @@ $ scoop install figlet
 
 You should now have a very sophisticated PowerShell terminal with a Linux like interaction and package management. Below are some essential `scoop` commands you will be using often.
 
-| Command  | Description                                |
-|----------|--------------------------------------------|
-| cleanup  | Cleanup apps by removing old versions      |
-| depends  | List dependencies for an app               |
-| help     | Show help for a command                    |
-| install  | Install apps                               |
-| list     |  List installed apps                       |
-| search   | Search available apps                      |
-|  status  | Show status and check for new app versions |
-| uninstall| Uninstall an app                           |
-| update   | Update apps, or Scoop itself               |
-| which    |  Locate a program path                     |
+| Command   | Description                                |
+| --------- | ------------------------------------------ |
+| cleanup   | Cleanup apps by removing old versions      |
+| depends   | List dependencies for an app               |
+| help      | Show help for a command                    |
+| install   | Install apps                               |
+| list      | List installed apps                        |
+| search    | Search available apps                      |
+| status    | Show status and check for new app versions |
+| uninstall | Uninstall an app                           |
+| update    | Update apps, or Scoop itself               |
+| which     | Locate a program path                      |
 
 #### Configuring the shell further
 
@@ -126,7 +126,7 @@ And then use the theme:
 $ pshazz use xpander
 ```
 
-_**Concerning the powershell font**, you will need to download and install the [Patched Consolas font for Powerline](https://github.com/runsisi/consolas-font-for-powerline) in order to display special characters required by some themes (e.g. pshazz, agnoster). 
+_**Concerning the powershell font**, you will need to download and install the [Patched Deja Vu Sans Mono font for Powerline](https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf) in order to display special characters required by some themes (e.g. pshazz, agnoster). 
 You can use this font in powershell from the **top left menu** -> **Defaults Menu** -> **Font**_
 
 
@@ -195,11 +195,11 @@ One of the most important aspect of cross-platform development is to be consiste
 
 Git comes with 3 settings
 
-| Setting Name | Value | Description |
----------------|-------|-------------|
-| core.autocrlf| true  | Convert all LF to CRLF when checking out and committing code. |
-| core.autocrlf| false | Disables CRLF conversion, garbage in/garbage out |
-| core.autocrlf| input | Convert all CRLF to LF when committing code |
+| Setting Name  | Value | Description                                                   |
+| ------------- | ----- | ------------------------------------------------------------- |
+| core.autocrlf | true  | Convert all LF to CRLF when checking out and committing code. |
+| core.autocrlf | false | Disables CRLF conversion, garbage in/garbage out              |
+| core.autocrlf | input | Convert all CRLF to LF when committing code                   |
 
 Normally you want to set the `core.autocrlf` to `false` or `input`.
 
