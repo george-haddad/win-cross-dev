@@ -183,6 +183,10 @@ fi
 unset color_prompt force_color_prompt
 ```
 
+Your console window should look like this
+![linux console preview](https://user-images.githubusercontent.com/3069650/32433129-a16c7e26-c2e2-11e7-9fd3-2f9b572d0980.gif)
+
+
 ## EOL <a name="eol"/>
 One of the most important aspect of cross-platform development is to be consistent with your EOLs in your files. The main objectives for this goal are the following:
 
