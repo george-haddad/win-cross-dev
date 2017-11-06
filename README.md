@@ -21,6 +21,7 @@ Cross Platform Development Setup for Windows
 - Add the scoop extras bucket to access more apps
 
 ```bash
+$ scoop install git
 $ scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 ```
 
@@ -30,7 +31,6 @@ $ scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 $ scoop install 7zip
 $ scoop install curl
 $ scoop install cacert
-$ scoop install git
 $ scoop install grep
 $ scoop install gzip
 $ scoop install less
@@ -149,8 +149,8 @@ Try the following to install the Solarized Dark theme for the terminal
 
 ```bash
 $ cd ~
-$ wget --no-check-certificate https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-dark
-$ mv dircolors.ansi-dark .dircolors
+$ wget --no-check-certificate https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark
+$ mv dircolors.256dark .dircolors
 $ eval `dircolors ~/.dircolors`
 ```
 
