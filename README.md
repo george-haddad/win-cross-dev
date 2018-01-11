@@ -132,7 +132,9 @@ $ pshazz use xpander
 _**Concerning the powershell font**, you will need to download and install the [Patched Deja Vu Sans Mono font for Powerline](https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf) in order to display special characters required by some themes (e.g. pshazz, agnoster).
 You can use this font in powershell from the **top left menu** -> **Defaults Menu** -> **Font**_
 
-> :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the prompt has that \*nix look and feel we all(?) love.
+> :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the prompt has that \*nix look and feel we all love.
+
+![pimped-powershell](https://user-images.githubusercontent.com/3069650/32433425-8e816f28-c2e3-11e7-9763-6ffec75117f8.png)
 
 ## Enabling the Linux Subsystem for Windows <a name="linux"/>
 
