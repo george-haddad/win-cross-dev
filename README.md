@@ -1,31 +1,33 @@
 # win-cross-dev
+
 Cross Platform Development Setup for Windows
 
 ---
 
 ## Table of Contents
 
-- [Enhancing PowerShell with Scoop](#powershell)
-- [Enabling the Linux Subsystem for Windows](#linux)
-- [EOL](#eol)
-- [Configure Git](#git)
-- [Configure IDE](#ide)
+* [Enhancing PowerShell with Scoop](#powershell)
+* [Enabling the Linux Subsystem for Windows](#linux)
+* [EOL](#eol)
+* [Configure Git](#git)
+* [Configure IDE](#ide)
+* [Node Modules](#node)
 
 ## Enhancing PowerShell with Scoop <a name="powershell"/>
 
 [Scoop](http://scoop.sh) is a command line installer for Windows that runs ontop of the PowerShell. You could say it is like [Homebrew](https://brew.sh/) but for Windows. The nice thing is that it installs and manages windows applications and ported Linux tools all in your user environment. It also makes your interaction with PowerShell identical if not very close to a Linux bash shell.
 
-- Open Windows PowerShell
-- Run `Set-ExecutionPolicy RemoteSigned -scope CurrentUser`
-- Run `iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
-- Add the scoop extras bucket to access more apps
+* Open Windows PowerShell
+* Run `Set-ExecutionPolicy RemoteSigned -scope CurrentUser`
+* Run `iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
+* Add the scoop extras bucket to access more apps
 
 ```bash
 $ scoop install git
 $ scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 ```
 
-- Run the following list of commands in order to install essential packages
+* Run the following list of commands in order to install essential packages
 
 ```bash
 $ scoop install 7zip
@@ -42,14 +44,14 @@ $ scoop install which
 $ scoop install sed
 ```
 
-- Run the following commands to make your PowerShell look awesome
+* Run the following commands to make your PowerShell look awesome
 
 ```bash
 $ scoop install concfg
 $ scoop install pshazz
 ```
 
-- Install essential development tools
+* Install essential development tools
 
 ```bash
 $ scoop install nodejs
@@ -60,7 +62,7 @@ $ scoop install vcredist2017
 $ scoop install openssh
 ```
 
-- Install some apps to impress your friends
+* Install some apps to impress your friends
 
 ```bash
 $ scoop install cowsay
@@ -86,13 +88,13 @@ You should now have a very sophisticated PowerShell terminal with a Linux like i
 
 _**For those who still think powershell can never look as hacky as bash or even zsh, allow me to prove you wrong:**_
 
-- First, use the utility `concfg` we've installed previously to search for a nice theme preset:
+* First, use the utility `concfg` we've installed previously to search for a nice theme preset:
 
 ```bash
 $ concfg presets
 ```
 
-- You can try all of these themes using the command below. The `powershell-defaults` one works great if you're not sure.
+* You can try all of these themes using the command below. The `powershell-defaults` one works great if you're not sure.
 
 ```bash
 $ concfg import powershell-defaults
@@ -100,14 +102,15 @@ $ concfg import powershell-defaults
 
 > :checkered_flag: That's all we need to prettify our shell, but there is more we can do to customize the prompt using another utility we have installed called `pshazz`
 
-- There are a lot of default themes built into pshazz, and it is fairly easy to create you own by running:
+* There are a lot of default themes built into pshazz, and it is fairly easy to create you own by running:
 
 ```bash
 $ pshazz new mytheme
 ```
+
 where `mytheme` is any name you want.
 
-- Once you are done editing your theme's colors and custom prompt text, you can use it with the following command:
+* Once you are done editing your theme's colors and custom prompt text, you can use it with the following command:
 
 ```bash
 $ pshazz use mytheme
@@ -126,24 +129,22 @@ And then use the theme:
 $ pshazz use xpander
 ```
 
-_**Concerning the powershell font**, you will need to download and install the [Patched Deja Vu Sans Mono font for Powerline](https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf) in order to display special characters required by some themes (e.g. pshazz, agnoster). 
+_**Concerning the powershell font**, you will need to download and install the [Patched Deja Vu Sans Mono font for Powerline](https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf) in order to display special characters required by some themes (e.g. pshazz, agnoster).
 You can use this font in powershell from the **top left menu** -> **Defaults Menu** -> **Font**_
 
+> :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the prompt has that \*nix look and feel we all(?) love.
 
-
-> :checkered_flag: That's it! Your shell is now colorful almost to a fault, and the prompt has that *nix look and feel we all(?) love.
-
-## Enabling the Linux Subsystem for Windows  <a name="linux"/>
+## Enabling the Linux Subsystem for Windows <a name="linux"/>
 
 Would it not be great if we literally had native Linux environment on Windows? Well it seems [pigs flew](https://en.wikipedia.org/wiki/When_pigs_fly)! Windows 10 64bit on the Anniversary edition has a beta Linux Subsystem available. When enabled it has a full featured Linux subsystem in your local user directory with an Ubuntu bash shell. On this shell you can do all Ubuntu command-line actions such as install apps using `apt-get`. What is also nice is that the Windows and Linux subsystems can see and communicate with each other (filesystem and networking). This makes it ideal to run Linux only services, commands and what not without having to install a Virtual Machine.
 
-- You must have a 64-bit version of Windows 10 Anniversary Update or later (build 1607+)
-- Follow the instructions on the [HowToGeek](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) site
-- When asked to create a Unix username, do so and use a 1 word name
-  - It would also be wise to use the same password as your windows password, unless you want to memorize 2 different passwords
-- Follow the instructions and also install the Ubuntu Font
-- Once the installation is all completed you will notice the terminal has some pretty nasty flurecent colors
-  - This is because it's running on the Windows filesystem and UID and GID bits are set in many places
+* You must have a 64-bit version of Windows 10 Anniversary Update or later (build 1607+)
+* Follow the instructions on the [HowToGeek](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) site
+* When asked to create a Unix username, do so and use a 1 word name
+  * It would also be wise to use the same password as your windows password, unless you want to memorize 2 different passwords
+* Follow the instructions and also install the Ubuntu Font
+* Once the installation is all completed you will notice the terminal has some pretty nasty flurecent colors
+  * This is because it's running on the Windows filesystem and UID and GID bits are set in many places
 
 Try the following to install the Solarized Dark theme for the terminal
 
@@ -156,7 +157,7 @@ $ eval `dircolors ~/.dircolors`
 
 You might want to decorate your terminal to show Git information as well since you will most likely store your git repo outside of the Linux sunsystem.
 
-- Open the file `.bashrc` and replace the following code blocks
+* Open the file `.bashrc` and replace the following code blocks
 
 Add This
 
@@ -186,14 +187,14 @@ unset color_prompt force_color_prompt
 Your console window should look like this
 ![linux console preview](https://user-images.githubusercontent.com/3069650/32433129-a16c7e26-c2e2-11e7-9fd3-2f9b572d0980.gif)
 
-
 ## EOL <a name="eol"/>
+
 One of the most important aspect of cross-platform development is to be consistent with your EOLs in your files. The main objectives for this goal are the following:
 
-- Use Linux style EOL '\n'
-- Add EOL at the end of each file
-- Use UTF-8 encoding for all text files
-- Use tools to enforce these objectives
+* Use Linux style EOL '\n'
+* Add EOL at the end of each file
+* Use UTF-8 encoding for all text files
+* Use tools to enforce these objectives
 
 ### Configure Git <a name="git"/>
 
@@ -207,21 +208,30 @@ Git comes with 3 settings
 
 Normally you want to set the `core.autocrlf` to `false` or `input`.
 
-- When to set it to `false`?
-  - This gives you ultimate control
-  - Code editor controls EOLs for you
-  - Tools such as eslint enforces Linux EOL
-  - You have tools and settings that convert CRLF for you
-- When to set it to `input`
-  - Git has the last say in converting your EOL
-  - Whatever happens it will always convert to Linux EOL when committing
-  - It may auto-convert LF to CRLF on checkout (needs verification)
-  - Code editor and tools may miss some files for enforcing Linux EOL
+* When to set it to `false`?
+  * This gives you ultimate control
+  * Code editor controls EOLs for you
+  * Tools such as eslint enforces Linux EOL
+  * You have tools and settings that convert CRLF for you
+* When to set it to `input`
+  * Git has the last say in converting your EOL
+  * Whatever happens it will always convert to Linux EOL when committing
+  * It may auto-convert LF to CRLF on checkout (needs verification)
+  * Code editor and tools may miss some files for enforcing Linux EOL
 
 ### Configure IDE <a name="ide"/>
 
 All if not most code editors and IDEs will have an option to select what Line endings to use in your code or on newly created files.
 
-- Set the IDE or code editor to exclusively use Linux EOL
-- Set UTF-8 as the default file encoding
-- Setup tools like eslint to enforce Linux EOL by flagging Windows EOL as errors
+* Set the IDE or code editor to exclusively use Linux EOL
+* Set UTF-8 as the default file encoding
+* Setup tools like eslint to enforce Linux EOL by flagging Windows EOL as errors
+
+### Node Modules <a name="node"/>
+
+There are some useful modules on npm that make cross platform development much easier. Here are a few with their core uses
+
+* [cross-env](https://www.npmjs.com/package/cross-env)
+  * Use environment variables without worrying what platform you are on
+* [shx](https://www.npmjs.com/package/shx)
+  * Writing one-off unix commands that can run on multi-platforms
