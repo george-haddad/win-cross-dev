@@ -23,50 +23,61 @@ Cross Platform Development Setup for Windows
 * Add the scoop extras bucket to access more apps
 
 ```bash
-$ scoop install git
-$ scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
+scoop install git
+# or you can get it bundled with openssh
+scoop install git-with-opensssh
+scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 ```
 
 * Run the following list of commands in order to install essential packages
 
 ```bash
-$ scoop install 7zip
-$ scoop install curl
-$ scoop install cacert
-$ scoop install grep
-$ scoop install gzip
-$ scoop install less
-$ scoop install sudo
-$ scoop install tar
-$ scoop install touch
-$ scoop install wget
-$ scoop install which
-$ scoop install sed
+scoop install 7zip
+scoop install curl
+scoop install cacert
+scoop install grep
+scoop install gzip
+scoop install less
+scoop install sudo
+scoop install tar
+scoop install touch
+scoop install wget
+scoop install which
+scoop install sed
+```
+
+* There are also some interesting packages to install that contain a group of binaries
+
+```bash
+scoop install coreutils
+scoop install diffutils
+scoop install findutils
+scoop install pciutils
 ```
 
 * Run the following commands to make your PowerShell look awesome
 
 ```bash
-$ scoop install concfg
-$ scoop install pshazz
+scoop install concfg
+scoop install pshazz
 ```
 
 * Install essential development tools
+* Note that the -g option is to install globally instead of locally only to user
 
 ```bash
-$ scoop install nodejs
-$ scoop install yarn
-$ scoop install php
-$ scoop install openjdk
-$ scoop install vcredist2017
-$ scoop install openssh
+scoop install -g nodejs-lts
+scoop install -g yarn
+scoop install -g php
+scoop install -g openjdk
+scoop install -g vcredist2017
 ```
 
 * Install some apps to impress your friends
 
 ```bash
-$ scoop install cowsay
-$ scoop install figlet
+scoop install cowsay
+scoop install figlet
 ```
 
 You should now have a very sophisticated PowerShell terminal with a Linux like interaction and package management. Below are some essential `scoop` commands you will be using often.
@@ -84,20 +95,20 @@ You should now have a very sophisticated PowerShell terminal with a Linux like i
 | update    | Update apps, or Scoop itself               |
 | which     | Locate a program path                      |
 
-#### Configuring the shell further
+### Configuring the shell further
 
 _**For those who still think powershell can never look as hacky as bash or even zsh, allow me to prove you wrong:**_
 
 * First, use the utility `concfg` we've installed previously to search for a nice theme preset:
 
 ```bash
-$ concfg presets
+concfg presets
 ```
 
 * You can try all of these themes using the command below. The `powershell-defaults` one works great if you're not sure.
 
 ```bash
-$ concfg import powershell-defaults
+concfg import powershell-defaults
 ```
 
 > :checkered_flag: That's all we need to prettify our shell, but there is more we can do to customize the prompt using another utility we have installed called `pshazz`
@@ -105,7 +116,7 @@ $ concfg import powershell-defaults
 * There are a lot of default themes built into pshazz, and it is fairly easy to create you own by running:
 
 ```bash
-$ pshazz new mytheme
+pshazz new mytheme
 ```
 
 where `mytheme` is any name you want.
@@ -113,20 +124,20 @@ where `mytheme` is any name you want.
 * Once you are done editing your theme's colors and custom prompt text, you can use it with the following command:
 
 ```bash
-$ pshazz use mytheme
+pshazz use mytheme
 ```
 
 A theme developed by @Faultless kicks it up a notch. You can get it by downloading the JSON file:
 
 ```bash
-~ $ curl -O https://raw.githubusercontent.com/Faultless/pshazz/master/themes/xpander.json
-~ $ mv ~/xpander.json ~/pshazz/xpander.json
+curl -O https://raw.githubusercontent.com/Faultless/pshazz/master/themes/xpander.json
+mv ~/xpander.json ~/pshazz/xpander.json
 ```
 
 And then use the theme:
 
 ```bash
-$ pshazz use xpander
+pshazz use xpander
 ```
 
 _**Concerning the powershell font**, you will need to download and install the [Patched Deja Vu Sans Mono font for Powerline](https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf) in order to display special characters required by some themes (e.g. pshazz, agnoster).
@@ -151,10 +162,10 @@ Would it not be great if we literally had native Linux environment on Windows? W
 Try the following to install the Solarized Dark theme for the terminal
 
 ```bash
-$ cd ~
-$ wget --no-check-certificate https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark
-$ mv dircolors.256dark .dircolors
-$ eval `dircolors ~/.dircolors`
+cd ~
+wget --no-check-certificate https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark
+mv dircolors.256dark .dircolors
+eval `dircolors ~/.dircolors`
 ```
 
 You might want to decorate your terminal to show Git information as well since you will most likely store your git repo outside of the Linux sunsystem.
