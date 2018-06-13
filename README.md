@@ -25,7 +25,7 @@ Cross Platform Development Setup for Windows
 ```bash
 scoop install git
 # or you can get it bundled with openssh
-scoop install git-with-opensssh
+scoop install git-with-openssh
 scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 ```
 
