@@ -1,0 +1,44 @@
+{
+  "projectName": "win-cross-dev",
+  "projectOwner": "george-haddad",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "george-haddad",
+      "name": "George Haddad",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3069650?v=4",
+      "profile": "http://stackoverflow.com/users/story/1387501",
+      "contributions": [
+        "doc",
+        "example",
+        "code"
+      ]
+    },
+    {
+      "login": "Faultless",
+      "name": "Serge Kamel",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7265811?v=4",
+      "profile": "https://github.com/Faultless",
+      "contributions": [
+        "doc",
+        "example",
+        "ideas"
+      ]
+    },
+    {
+      "login": "lxalln",
+      "name": "Alex Allen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2781908?v=4",
+      "profile": "http://lxalln.com",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ]
+}
