@@ -19,6 +19,15 @@
         "example",
         "ideas"
       ]
+    },
+    {
+      "login": "lxalln",
+      "name": "Alex Allen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2781908?v=4",
+      "profile": "http://lxalln.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ]
 }
