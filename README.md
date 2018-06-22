@@ -1,5 +1,5 @@
 # win-cross-dev
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 Cross Platform Development Setup for Windows
 
@@ -254,4 +254,6 @@ There are some useful modules on npm that make cross platform development much e
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
+| [<img src="https://avatars1.githubusercontent.com/u/7265811?v=4" width="100px;"/><br /><sub><b>Serge Kamel</b></sub>](https://github.com/Faultless)<br />[📖](https://github.com/george-haddad/win-cross-dev/commits?author=Faultless "Documentation") [💡](#example-Faultless "Examples") [🤔](#ideas-Faultless "Ideas, Planning, & Feedback") |
+| :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
