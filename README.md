@@ -1,4 +1,5 @@
 # win-cross-dev
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
 
 Cross Platform Development Setup for Windows
 
@@ -248,3 +249,9 @@ There are some useful modules on npm that make cross platform development much e
   * Use environment variables without worrying what platform you are on
 * [shx](https://www.npmjs.com/package/shx)
   * Writing one-off unix commands that can run on multi-platforms
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
