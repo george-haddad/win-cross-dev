@@ -250,6 +250,11 @@ There are some useful modules on npm that make cross platform development much e
   * Use environment variables without worrying what platform you are on
 * [shx](https://www.npmjs.com/package/shx)
   * Writing one-off unix commands that can run on multi-platforms
+* [npx](https://www.npmjs.com/package/npx)
+  * Execute npm binaries without having to specify relative location
+* [npm-run-all](https://www.npmjs.com/package/npm-run-all)
+  * Execute multuple npm scripts in a nice clean and lean way
+
 
 ## Contributors
 
