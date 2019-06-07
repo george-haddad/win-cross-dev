@@ -26,14 +26,14 @@ Cross Platform Development Setup for Windows
 
 ```bash
 scoop install git
-# or you can get it bundled with openssh
-scoop install git-with-openssh
 scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 ```
 
+* Windows now comes with builtin ssh native binary. You can enable it by viewing [this guide](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/)
 * Run the following list of commands in order to install essential packages
 
 ```bash
+scoop install aria2
 scoop install 7zip
 scoop install curl
 scoop install cacert
@@ -46,9 +46,12 @@ scoop install touch
 scoop install wget
 scoop install which
 scoop install sed
+scoop install make
+scoop install openssl
+scoop install telnet
 ```
 
-* There are also some interesting packages to install that contain a group of binaries
+* There are also some interesting packages to install that contain a group of binaries for those familar with Linux command line tools
 
 ```bash
 scoop install coreutils
@@ -73,6 +76,8 @@ scoop install -g yarn
 scoop install -g php
 scoop install -g openjdk
 scoop install -g vcredist2017
+scoop install -g gradle
+scoop install -g docker
 ```
 
 * Install some apps to impress your friends
@@ -81,6 +86,8 @@ scoop install -g vcredist2017
 scoop install cowsay
 scoop install figlet
 ```
+
+* Scoop also comes with the ability to install regular apps as well such as `foobar2000` to listen to music.
 
 You should now have a very sophisticated PowerShell terminal with a Linux like interaction and package management. Below are some essential `scoop` commands you will be using often.
 
@@ -261,5 +268,5 @@ There are some useful modules on npm that make cross platform development much e
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
 | [<img src="https://avatars2.githubusercontent.com/u/3069650?v=4" width="100px;"/><br /><sub><b>George Haddad</b></sub>](http://stackoverflow.com/users/story/1387501)<br />[📖](https://github.com/george-haddad/win-cross-dev/commits?author=george-haddad "Documentation") [💡](#example-george-haddad "Examples") [💻](https://github.com/george-haddad/win-cross-dev/commits?author=george-haddad "Code") | [<img src="https://avatars1.githubusercontent.com/u/7265811?v=4" width="100px;"/><br /><sub><b>Serge Kamel</b></sub>](https://github.com/Faultless)<br />[📖](https://github.com/george-haddad/win-cross-dev/commits?author=Faultless "Documentation") [💡](#example-Faultless "Examples") [🤔](#ideas-Faultless "Ideas, Planning, & Feedback") | [<img src="https://avatars3.githubusercontent.com/u/2781908?v=4" width="100px;"/><br /><sub><b>Alex Allen</b></sub>](http://lxalln.com)<br />[📖](https://github.com/george-haddad/win-cross-dev/commits?author=lxalln "Documentation") |
-| :---: | :---: | :---: |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
