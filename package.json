@@ -3,14 +3,17 @@
     "test": "echo \"no tests\"",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
-    "contributors:check": "all-contributors check"
+    "contributors:check": "all-contributors check",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "name": "win-cross-dev",
   "description": "[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "all-contributors-cli": "^6.7.0"
+    "all-contributors-cli": "^6.7.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {},
   "repository": {
@@ -29,5 +32,6 @@
   "bugs": {
     "url": "https://github.com/george-haddad/win-cross-dev/issues"
   },
-  "homepage": "https://github.com/george-haddad/win-cross-dev#readme"
+  "homepage": "https://github.com/george-haddad/win-cross-dev#readme",
+  "snyk": true
 }
