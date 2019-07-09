@@ -20,3 +20,41 @@ patch:
         patched: '2019-07-04T00:13:57.953Z'
     - all-contributors-cli > json-fixer > eslint-config-kentcdodds > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
         patched: '2019-07-04T00:13:57.953Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > json-fixer > eslint-config-kentcdodds > babel-eslint > @babel/traverse > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > json-fixer > eslint-config-kentcdodds > babel-eslint > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > json-fixer > eslint-config-kentcdodds > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > json-fixer > eslint-config-kentcdodds > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > inquirer > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > json-fixer > eslint-config-kentcdodds > eslint-import-resolver-webpack > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
+    - all-contributors-cli > json-fixer > eslint-config-kentcdodds > eslint-plugin-import > lodash:
+        patched: '2019-07-09T02:03:43.659Z'
