@@ -58,3 +58,8 @@ patch:
         patched: '2019-07-09T02:03:43.659Z'
     - all-contributors-cli > json-fixer > eslint-config-kentcdodds > eslint-plugin-import > lodash:
         patched: '2019-07-09T02:03:43.659Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T00:13:42.471Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T00:13:42.471Z'
