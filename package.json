@@ -12,8 +12,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "all-contributors-cli": "6.13.0",
-    "snyk": "^1.265.0"
+    "snyk": "^1.278.2",
+    "all-contributors-cli": "6.13.0"
   },
   "devDependencies": {},
   "repository": {
