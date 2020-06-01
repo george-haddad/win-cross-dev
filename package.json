@@ -13,7 +13,7 @@
   "main": "index.js",
   "dependencies": {
     "all-contributors-cli": "6.15.0",
-    "snyk": "1.332.0"
+    "snyk": "1.334.0"
   },
   "devDependencies": {},
   "repository": {
