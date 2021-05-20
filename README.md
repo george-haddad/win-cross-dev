@@ -17,11 +17,27 @@ Cross Platform Development Setup for Windows
 
 ## Enhancing PowerShell with Scoop <a name="powershell"/>
 
-[Scoop](http://scoop.sh) is a command line installer for Windows that runs ontop of the PowerShell. You could say it is like [Homebrew](https://brew.sh/) but for Windows. The nice thing is that it installs and manages windows applications and ported Linux tools all in your user environment. It also makes your interaction with PowerShell identical if not very close to a Linux bash shell.
+[Scoop](http://scoop.sh) is a command line installer for Windows that runs on top of the PowerShell. You could say it is like [Homebrew](https://brew.sh/) but for Windows. The nice thing is that it installs and manages windows applications and ported Linux tools all in your user environment. It also makes your interaction with PowerShell identical if not very close to a Linux bash shell.
+
+**Prerequisites**
+
+* [PowerShell 5](https://aka.ms/wmf5download) or later
+* [.NET Framework 4.5](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6) or later* 
+
+**Installation**
 
 * Open Windows PowerShell
+* Run `Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')`
+* or shorter command `iwr -useb get.scoop.sh | iex`
+
+If you experience some errors running the above command then try changing the execution policy
+
 * Run `Set-ExecutionPolicy RemoteSigned -scope CurrentUser`
-* Run `iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
+
+If you still encounter errors then try browsing [Scoop.sh](https://github.com/lukesampson/scoop/issues)'s issues page on github, or contact your IT Administrator if your machine is managed.
+
+**Next ...**
+
 * Add the scoop extras bucket to access more apps
 
 ```bash
