@@ -1,6 +1,6 @@
 # win-cross-dev
 
-[![License: FDL 1.3](https://img.shields.io/badge/License-FDL%20v1.3-blue.svg)](https://www.gnu.org/licenses/fdl-1.3) [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors) [![Greenkeeper badge](https://badges.greenkeeper.io/george-haddad/win-cross-dev.svg)](https://greenkeeper.io/)
+[![License: FDL 1.3](https://img.shields.io/badge/License-FDL%20v1.3-blue.svg)](https://www.gnu.org/licenses/fdl-1.3) [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors) ![Known Vulnerabilities](https://snyk.io/test/github/george-haddad/win-cross-dev/badge.svg)
 
 Cross Platform Development Setup for Windows
 
