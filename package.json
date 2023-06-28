@@ -12,7 +12,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "all-contributors-cli": "^6.25.0",
+    "all-contributors-cli": "^6.25.1",
     "snyk": "^1.1150.0"
   },
   "devDependencies": {},
